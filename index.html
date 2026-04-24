@@ -1,15 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Happy Birthday 🎂</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Ankit 🎉</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body style="text-align:center; background:pink; font-family:sans-serif;">
+<audio id="music" src="assets/music.mp3"></audio>
 
-<h1>Happy Birthday 🎉</h1>
-<p>Mere best friend ke liye ❤️</p>
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+  <h1>Happy Birthday, Ankit 🎉🎂</h1>
+  <p>Today is all about you and your beautiful smile ❤️</p>
 
-<img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" width="300">
+  <div class="buttons">
+    <button onclick="dropBanner()">🎀 Add Banner</button>
+    <button onclick="releaseBalloons()">🎈 Release Balloons</button>
+    <button onclick="showCake()">🎂 Show Cake</button>
+    <button onclick="celebrate()">🎉 Celebrate</button>
+  </div>
 
+  <div id="banner"></div>
+  <div id="balloons"></div>
+
+  <div id="cake" class="hidden">
+    🎂
+    <button onclick="blowCandles()">Blow the Candles 🕯️</button>
+  </div>
+
+  <div id="wishMsg"></div>
+
+  <button class="next hidden" id="next1" onclick="goToPage(2)">Next Surprise ➜</button>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+  <div class="card" onclick="openCard(this)">
+    <div class="front">🎁 Click Me</div>
+    <div class="back">
+      <img src="assets/monkey.gif" width="120"/>
+      <p>
+        Happy Birthday main chat gpt se msg nikal kar wish nahi karogi 😂  
+        sorry u roast 🤭 but koch efforts toh bante hai  
+        app apni life main acha kar rahe ho  
+        Bhagwan apko har khusi de ✨ ❤️
+      </p>
+    </div>
+  </div>
+  <button class="next" onclick="goToPage(3)">Open Memory Gallery ➜</button>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+  <div class="carousel">
+    <img src="assets/img1.jpg">
+    <img src="assets/img2.jpg">
+    <img src="assets/img3.jpg">
+    <img src="assets/img4.jpg">
+  </div>
+  <button class="next" onclick="goToPage(4)">Final Message ➜</button>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+  <div class="message-box">
+    <p id="typing"></p>
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
